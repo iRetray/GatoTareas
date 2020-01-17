@@ -3,8 +3,8 @@
 <head>
 	<link rel="stylesheet" type="text/css" href="styles.css">
 	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
-	<script type="text/javascript" src="bootstrap/js/bootstrap.js"></script>
 	<script type="text/javascript" src="bootstrap/js/jquery-3.4.1.min.js"></script>
+	<script type="text/javascript" src="bootstrap/js/bootstrap.js"></script>
 	<meta charset="utf-8">
 	<title>Gato Tareas</title>
 </head>
@@ -16,38 +16,17 @@
 			<img src="img/gatoNegro.png" width="45px" class="float-left">
 			<p class="h2 text-white float-left separadoIzquierda">GatoTareas</p>
 		</div>
+		<div class="loginModal">
+			<img src="img/userBlanco.png" width="45px">
+			<button type="button" class="btn btn btn-light" data-toggle="modal" data-target="#modalLogin">
+			 Iniciar Sesión
+			</button>
+		</div>
 	</div>
 	<div class="imagen">
 		<img src="img/homeCat.jpg" class="img-fluid" width="100%">
 	</div>
-	<div class="loginCliente">
-		<table class="rounded table table-dark gradienteGrisClaro">
-			<tr>
-				<th>
-					<div class="loginCliente">
-					<form method="post" action="paginaPrincipal/redireccionador.php">
-			<p class="display-4"><strong>Iniciar Sesión</strong></p>
-			<div class="form-group">
-			    <label for="exampleInputEmail1">Usuario</label>
-			    <input type="text" class="form-control" id="usuario" placeholder="Escribe tu nombre de Usuario">
-			    <small id="emailHelp" class="form-text text-white">Si aún no tienes uno debes <a href="#registro" class="text-light" title="Sección de Registro"><strong>registrarte.</strong></a></small>
-			</div>
-			 <div class="form-group">
-			    <label for="exampleInputPassword1">Contraseña</label>
-			    <input type="password" class="form-control" id="clave" placeholder="Escribe tu contraseña">
-			 </div>
-			 <br>
-			 <center><button type="submit" class="btn btn-primary">Ingresar</button></center>
-			 <br>
-			 
-		</form>
-		</div>
-				</th>
-			</tr>
-
-  		</table>	
-		
-	</div>
+	
 	<div class="loginUsuario">
 		<table class="rounded table gradienteGrisClaro">
 			<tr>
@@ -116,6 +95,48 @@
 		</div>
 		</div>
 	</div>
+</div>
+
+<!-------------------------- Modales ------------------------------------>
+
+<div class="modal fade" id="modalLogin" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header modalGris">
+      	<p class="h2 fuenteHeader text-white">Iniciar Sesión</p>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body fondoGris">
+      	<div class="loginCliente">
+        <form>
+  <div class="form-group row">
+    <label for="inputEmail3" class="col-sm-2 col-form-label text-white">Usuario</label>
+    <div class="col-sm-10">
+      <input type="email" class="form-control" id="inputEmail3" placeholder="Tu nombre de Usuario">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="inputPassword3" class="col-sm-2 col-form-label text-white">Clave</label>
+    <div class="col-sm-10">
+      <input type="password" class="form-control" id="inputPassword3" placeholder="Tu Contraseña">
+    </div>
+    
+  </div>
+  <div class="centrado">
+    	<small id="emailHelp" class="form-text text-white text-muted">¿Olvidaste tu contraseña? Puedes intentar <a href="" title="Recuperar contraseña">recuperarla mediante tu correo.</a></small>
+    </div>
+
+  <div class="centrado">
+      <button type="submit" class="btn btn-primary">Ingresar al Sistema</button>
+    </div>
+  </div>
+</form>
+		</div>
+      </div>
+    </div>
+  </div>
 </div>
 
 </body>
