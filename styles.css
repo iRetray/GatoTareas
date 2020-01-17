@@ -37,3 +37,7 @@
 .separadoIzquierda {
     margin-left: 15px;
 }
+
+.gradienteGrisClaro {
+    background: linear-gradient(to bottom, #404040 0%, #cccccc 100%);
+}
