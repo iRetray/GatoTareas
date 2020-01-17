@@ -2,22 +2,90 @@
 <html>
 <head>
 	<link rel="stylesheet" type="text/css" href="styles.css">
+	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+	<script type="text/javascript" src="bootstrap/js/bootstrap.js"></script>
+	<script type="text/javascript" src="bootstrap/js/jquery-3.4.1.min.js"></script>
+	<meta charset="utf-8">
 	<title>Gato Tareas</title>
 </head>
-<body>
+<body style="background-color:#d8d8d8;">
 
 <div class="general">
+	<div class="header">
+		<center>
+		<p class="display-3">GatoTareas</a>
+			</center>
+	</div>
 	<div class="imagen">
-		<h3>Imagen</h3>
+		<img src="img/homeCat.jpg" class="img-fluid" width="100%">
 	</div>
 	<div class="loginCliente">
-		<h3>Login Cliente</h3>
+		<table class="rounded table table-dark">
+			<tr>
+				<th>
+					<div class="loginCliente">
+					<form>
+			<p class="display-4">Iniciar Sesión</p>
+			<div class="form-group">
+			    <label for="exampleInputEmail1">Usuario</label>
+			    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Escribe tu nombre de Usuario">
+			    <small id="emailHelp" class="form-text text-muted">Si aun no tienes uno debes <a href="#">registrarte.</a></small>
+			</div>
+			 <div class="form-group">
+			    <label for="exampleInputPassword1">Contraseña</label>
+			    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Escribe tu contraseña">
+			 </div>
+			 <br>
+			 <center><button type="submit" class="btn btn-primary">Ingresar</button></center>
+			 <br>
+			 
+		</form>
+		</div>
+				</th>
+			</tr>
+
+  		</table>	
+		
 	</div>
 	<div class="loginUsuario">
-		<h3>Login Usuario</h3>
+		<table class="rounded table bg-secondary">
+			<tr>
+				<th>
+					<div class="loginCliente">
+					<form>
+			<p class="display-4">Registrarse</p>
+			<div class="form-group">
+			    <label for="exampleInputEmail1">Nombre de Usuario</label>
+			    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Escribe un nombre de Usuario">
+			    <small id="emailHelp" class="form-text text-white">La disponibilidad del nickname será verificada.</a></small>
+			</div>
+			 <div class="form-group">
+			    <label for="exampleInputPassword1">Escribe una Contraseña</label>
+			    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Contraseña">
+			 </div>
+			 <div class="form-group">
+			    <label for="exampleInputPassword1">Repite la Contraseña</label>
+			    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Contraseña">
+			 </div>
+			 <br>
+			 <center><button type="submit" class="btn btn-primary">Ingresar</button></center>
+			 <br>
+			 
+		</form>
+		</div>
+				</th>
+			</tr>
+
+  		</table>
 	</div>
 	<div class="redes">
-		<a href="https://api.whatsapp.com/send?phone=573507948999&text=Hola! Quiero recibir más información sobre GatoTareas :D">Enviar mensaje de Whatsapp</a>
+		<img src="img/whatsapp.png" class="img-thumbnail float-left" width="150px">
+		<div class="float-left">
+			<div class="separadoIzquierda">
+			<h1 class="display-4">Contacto Directo</h1>
+		<p class="lead">Comunícate directamente con GatoTareas<a href="https://api.whatsapp.com/send?phone=573507948999&text=Hola! Quiero recibir más información sobre GatoTareas :D" class="lead"><br>enviando un mensaje de Whatsapp.</a></p>
+		</div>
+		</div>
 	</div>
 </div>
 

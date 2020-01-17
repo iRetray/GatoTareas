@@ -1,8 +1,9 @@
 .general {
     display: grid;
-    grid-template-rows: auto auto auto auto;
+    grid-template-rows: auto auto auto auto auto;
     grid-template-columns: 2fr 1fr;
     grid-template-areas:
+        "header header"
     	"imagen loginCliente"
     	"imagen loginCliente"
     	"imagen loginUsuario"
@@ -10,13 +11,29 @@
 }
 .general .imagen {
     grid-area: imagen;
+    padding: 10px;
 }
 .general .loginCliente {
     grid-area: loginCliente;
+    padding: 15px;
 }
 .general .loginUsuario {
     grid-area: loginUsuario;
+    padding: 10px;
 }
 .general .redes {
     grid-area: redes;
+    padding: 10px;
+}
+.general .header {
+    grid-area: header;
+    padding: 10px;
+}
+
+.antiSaltoDeLinea {
+    white-space:nowrap;
+}
+
+.separadoIzquierda {
+    margin-left: 15px;
 }
