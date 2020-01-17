@@ -1,10 +1,9 @@
 <?php  
 include('../php/conexion.php');
 include('../php/objetoUsuario.php');
-if(){
-
+session_start();
+$usuarioActivo = new usuario($_SESSION['usuario'], $_SESSION['clave']);
+if (!$usuarioActivo->verificarSesion()) {
+	header("Location:errorDeSeguridad.php");
 }
-$_SESSION['nombre'] = $nombre;
-$_SESSION['usuario'] = $usuario;
-$_SESSION['tipoUsuario'] = $tipoUsuario;
 ?>

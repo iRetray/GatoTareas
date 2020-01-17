@@ -36,7 +36,7 @@ class Usuario
 	}
 
 	public function verificarSesion(){
-		ession_start();
+		session_start();
 		if($_SESSION['usuario']=$this->usuario && $_SESSION['clave']=$this->clave{
 			return true;
 		}
