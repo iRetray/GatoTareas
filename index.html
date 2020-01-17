@@ -24,12 +24,12 @@
 			<tr>
 				<th>
 					<div class="loginCliente">
-					<form>
-			<p class="display-4">Iniciar Sesión</p>
+					<form method="post" action="paginaPrincipal/redireccionador.php">
+			<p class="display-4"><strong>Iniciar Sesión</strong></p>
 			<div class="form-group">
 			    <label for="exampleInputEmail1">Usuario</label>
 			    <input type="text" class="form-control" id="usuario" placeholder="Escribe tu nombre de Usuario">
-			    <small id="emailHelp" class="form-text text-muted">Si aun no tienes uno debes <a href="#">registrarte.</a></small>
+			    <small id="emailHelp" class="form-text text-muted">Si aun no tienes uno debes <a href="#registro">registrarte.</a></small>
 			</div>
 			 <div class="form-group">
 			    <label for="exampleInputPassword1">Contraseña</label>
@@ -53,19 +53,24 @@
 				<th>
 					<div class="loginCliente">
 					<form>
-			<p class="display-4">Registrarse</p>
+			<a href="" name="registro"></a>
+			<p class="display-4 text-white"><strong>Registrarse</strong></p>
 			<div class="form-group">
-			    <label for="exampleInputEmail1">Nombre de Usuario</label>
-			    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Escribe un nombre de Usuario">
+			    <label for="exampleInputEmail1" class="text-white">Nombre de Usuario</label>
+			    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Escribe un nombre de Usuario" >
 			    <small id="emailHelp" class="form-text text-white">La disponibilidad del nickname será verificada.</a></small>
 			</div>
 			 <div class="form-group">
-			    <label for="exampleInputPassword1">Escribe una Contraseña</label>
-			    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Contraseña">
+			    <label for="exampleInputPassword1" class="text-white">Escribe y repite una Contraseña</label>
+			    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Escribe una Contraseña">
 			 </div>
 			 <div class="form-group">
-			    <label for="exampleInputPassword1">Repite la Contraseña</label>
-			    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Contraseña">
+			    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Vuelve a escribir la contraseña">
+			 </div>
+			 <div class="form-group">
+			    <label for="exampleInputPassword1" class="text-white">Codigo de Colaborador</label>
+			    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Codigo especial">
+			    <small id="emailHelp" class="form-text text-white">Unicamente para trabajadores de GatoTareas.</a></small>
 			 </div>
 			 <br>
 			 <center><button type="submit" class="btn btn-primary">Ingresar</button></center>

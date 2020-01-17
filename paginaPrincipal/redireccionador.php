@@ -19,13 +19,13 @@ while ($columna = mysqli_fetch_array( $resultado ))
 		}
 }
 if(!$credencialesCorrectas){
-	header("Location:errorDeCredenciales.php");
+	header("Location:../php/errorDeCredenciales.php");
 }
-elseif($usuarioActivo->getTipoUsuario()="cliente"){
-	header("Location:/cliente/home.php");
+elseif($usuarioActivo->getTipoUsuario()=="cliente"){
+	header("Location:cliente/home.php");
 }
-elseif ($usuarioActivo->getTipoUsuario()="encargado") {
-	header("Location:/encargado/home.php");
+elseif ($usuarioActivo->getTipoUsuario()=="encargado") {
+	header("Location:encargado/home.php");
 }
 
 ?>
