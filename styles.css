@@ -27,7 +27,18 @@
 }
 .general .header {
     grid-area: header;
-    padding: 10px;
+    background: #40698c;
+    
+}
+
+@import url('https://fonts.googleapis.com/css?family=Raleway:600&display=swap');
+
+.titulo {
+    float: left;
+    margin-left: 15px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-family: 'Raleway', sans-serif;
 }
 
 .antiSaltoDeLinea {
@@ -39,5 +50,9 @@
 }
 
 .gradienteGrisClaro {
-    background: linear-gradient(to bottom, #404040 0%, #cccccc 100%);
+    background: linear-gradient(to bottom, #404040 12%, #b7b7b7 100%);
+}
+
+.gradienteAzulOscuro {
+    background: linear-gradient(to bottom, #343572 8%, #769df2 100%);
 }
