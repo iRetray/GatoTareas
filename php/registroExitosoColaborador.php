@@ -29,12 +29,15 @@
 					<center><p class="display-3">¡Felicidades!</p></center>
 					<center><p class="display-4"><em>
 						<?php
-							session_start(); 
-							$nombre = $_SESSION['nombre'];
+							include('../conexion.php');
+							include('objetoUsuario.php');
+							$usuarioActivo = new usuario($_SESION['usuario'], $_SESSION['clave']);
+
+							$nombre = $usuarioActivo->getNombre();
 							echo "".$nombre;
 						?>
 					</em></p></center>
-					<p class="lead">El registro de usuario ha terminado correctamente, ahora puede acceder a <strong>GatoTareas</strong> mediante sus credenciales para poder disfrutar de todos los servicios que tenemos para usted.</p>
+					<p class="lead">El registro de usuario ha terminado correctamente, ahora puede acceder a <strong>GatoTareas</strong><i> como colaborador</i> mediante sus credenciales para poder empezar a realizar trabajos de nuestros clientes.</p>
 					<center>
 					<button type="button" class="btn btn-primary btn-lg" onclick="location.href='../index.html'">Volver al Inicio</button></center>
 				</span>

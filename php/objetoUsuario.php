@@ -1,5 +1,4 @@
 <?php  
-include('conexion.php');
 
 class Usuario
 {
@@ -13,6 +12,7 @@ class Usuario
 
 	public function __construct($usuario, $clave)
 	{
+		include('../conexion.php');
 		$this->usuario = $usuario;
 		$consulta = "SELECT * FROM `usuarios` WHERE 1";
 		$resultado = mysqli_query($conexion, $consulta);
@@ -43,6 +43,21 @@ class Usuario
 		else {
 			return false;
 		}
+	}
+
+	public function verificarRegistro(){
+		$consulta = "SELECT * FROM `usuarios` WHERE 1";
+		$resultado = mysqli_query($conexion, $consulta);
+		while ($columna = mysqli_fetch_array( $resultado ))
+			{
+				if ($columna['usuario']==$this->usuario) {
+					return "usuarioRepetido";
+				}
+				if ($columna['correo']==$this->correo) {
+					return "correoRepetido";
+				}
+			}
+		return "correcto";
 	}
 
 	public function getUsuario(){
