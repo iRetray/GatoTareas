@@ -1,7 +1,7 @@
 <?php  
 
 session_start();
-include('../../funciones.php');
+include('../funciones.php');
 enviarCorreo($_SESSION['correo'], "Recuperación de Clave GatoTareas", "Sus credenciales para ingresar en Gato Tareas son: \n\nUsuario: ".$_SESSION['usuario']."\nClave: ".$_SESSION['clave']."\n\nAhora puede Iniciar sesion en GatoTareas."); 
 
 ?>
