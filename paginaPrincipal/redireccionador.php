@@ -1,31 +1,32 @@
 <?php
-include('../php/conexion.php');
-include('../php/objetoUsuario.php');
+include('../conexion.php');
+include('objetoUsuario.php');
 
+$nombre = $_POST['nombre'];
+$correo = $_POST['correo'];
+$whatsapp = $_POST['whatsapp'];
+$nequi = $_POST['nequi'];
 $usuario = $_POST['usuario'];
 $clave = $_POST['clave'];
+$claveRepeat = $_POST['claveRepeat'];
+$codigo = $_POST['codigo'];
 
-$consulta = "SELECT * FROM `usuarios` WHERE 1";
-$resultado = mysqli_query($conexion, $consulta);
-$credencialesCorrectas = false;
-while ($columna = mysqli_fetch_array( $resultado ))
-{
-	if ($columna['usuario']==$usuario) {
-		if ($columna['clave']==$clave) {
-			$credencialesCorrectas = true;
-			$usuarioActivo = new usuario($usuario, $clave);
-			$usuarioActivo->iniciarSesion();
-			}
-		}
-}
-if(!$credencialesCorrectas){
-	header("Location:../php/errorDeCredenciales.php");
-}
-elseif($usuarioActivo->getTipoUsuario()=="cliente"){
-	header("Location:cliente/home.php");
-}
-elseif ($usuarioActivo->getTipoUsuario()=="encargado") {
-	header("Location:encargado/home.php");
+$usuarioActivo = new usuario($usuario, $clave);
+$usuarioActivo->iniciarSesion();
+
+if ($usuarioActivo->verificarRegistro()=="usuarioRepetido") {
+	header("Location:usuarioRepetido.php");
+} elseif ($usuarioActivo->verificarRegistro()=="correoRepetido") {
+	header("Location:correoRepetido.php");
+} elseif ($usuarioActivo->verificarRegistro()=="correcto" && $clave==$claveRepeat) {
+	if ($codigo="2d7ba3fa7eb") {
+		header("Location:registroExitosoNormal.php");
+	} else {
+		header("Location:registroExitosoColaborador.php");
+	}
+	
+} else {
+	header("Location:claveNoCoincide.php");
 }
 
 ?>

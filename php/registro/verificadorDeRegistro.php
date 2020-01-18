@@ -1,6 +1,6 @@
 <?php
-include('../conexion.php');
-include('objetoUsuario.php');
+include('../../conexion.php');
+include('../objetoUsuario.php');
 
 $nombre = $_POST['nombre'];
 $correo = $_POST['correo'];
@@ -17,9 +17,9 @@ $usuarioActivo->iniciarSesion();
 $_SESSION['nombre'] = $nombre;
 
 if ($usuarioActivo->verificarRegistro()=="usuarioRepetido") {
-	header("Location:usuarioRepetido.php");
+	header("Location:../errores/usuarioRepetido.php");
 } elseif ($usuarioActivo->verificarRegistro()=="correoRepetido") {
-	header("Location:correoRepetido.php");
+	header("Location:../errores/correoRepetido.php");
 } elseif ($usuarioActivo->verificarRegistro()=="correcto" && $clave==$claveRepeat) {
 	if ($codigo=="2d7ba3fa7eb") {
 		header("Location:registroExitosoColaborador.php");
@@ -28,7 +28,7 @@ if ($usuarioActivo->verificarRegistro()=="usuarioRepetido") {
 	}
 	
 } else {
-	header("Location:claveNoCoincide.php");
+	header("Location:../errores/claveNoCoincide.php");
 }
 
 ?>
