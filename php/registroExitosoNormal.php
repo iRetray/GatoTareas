@@ -29,12 +29,8 @@
 					<center><p class="display-3">¡Felicidades!</p></center>
 					<center><p class="display-4"><em>
 						<?php
-							include('../conexion.php');
-							include('objetoUsuario.php');
 							session_start();
-							$usuarioActivo = new usuario($_SESSION['usuario'], $_SESSION['clave']);
-
-							$nombre = $usuarioActivo->getNombre();
+							$nombre = $_SESSION['nombre'];
 							echo "".$nombre;
 						?>
 					</em></p></center>

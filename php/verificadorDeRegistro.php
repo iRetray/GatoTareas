@@ -14,15 +14,17 @@ $codigo = $_POST['codigo'];
 $usuarioActivo = new usuario($usuario, $clave);
 $usuarioActivo->iniciarSesion();
 
+$_SESSION['nombre'] = $nombre;
+
 if ($usuarioActivo->verificarRegistro()=="usuarioRepetido") {
 	header("Location:usuarioRepetido.php");
 } elseif ($usuarioActivo->verificarRegistro()=="correoRepetido") {
 	header("Location:correoRepetido.php");
 } elseif ($usuarioActivo->verificarRegistro()=="correcto" && $clave==$claveRepeat) {
-	if ($codigo="2d7ba3fa7eb") {
-		header("Location:registroExitosoNormal.php");
-	} else {
+	if ($codigo=="2d7ba3fa7eb") {
 		header("Location:registroExitosoColaborador.php");
+	} else {
+		header("Location:registroExitosoNormal.php");
 	}
 	
 } else {
