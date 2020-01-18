@@ -1,6 +1,6 @@
 <?php
 include('../conexion.php');
-include('objetoUsuario.php');
+include('../php/objetoUsuario.php');
 
 $nombre = $_POST['nombre'];
 $correo = $_POST['correo'];
