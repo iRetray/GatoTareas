@@ -15,6 +15,7 @@ while ($columna = mysqli_fetch_array( $resultado ))
 		session_start();
 		$_SESSION['usuario'] = $columna['usuario'];
 		$_SESSION['clave'] = $columna['clave'];
+		$_SESSION['correo'] = $correo;
 	}		
 }
 

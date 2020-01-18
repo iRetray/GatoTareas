@@ -1,3 +1,11 @@
+<?php  
+
+session_start();
+include('../../funciones.php');
+enviarCorreo($_SESSION['correo'], "Recuperación de Clave GatoTareas", "Sus credenciales para ingresar en Gato Tareas son: \n\nUsuario: ".$_SESSION['usuario']."\nClave: ".$_SESSION['clave']."\n\nAhora puede Iniciar sesion en GatoTareas."); 
+
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -27,14 +35,17 @@
 			<td>
 				<span class="align-middle">
 					<center><p class="display-3">Correcto</p></center>
-					<center><p class="lead">El correo que proporcionaste esta vinculado con las siguientes credenciales. Ahora podras iniciar sesión normalmente.</p></center>
+					<center><p class="lead">El correo que proporcionaste esta vinculado a una cuenta en nuestro sistema. Las credenciales fueron enviadas a tu correo: <i>
+						<?php  
+							echo "".$_SESSION['correo'];
+						?>
+					</i></p></center>
 					<center>
 						<form>
 						  <div class="form-group row">
 						    <label for="inputEmail3" class="col-sm-2 col-form-label">Usuario</label>
 						    <div class="col-sm-10">
-						    	<?php
-						    		session_start();  
+						    	<?php 
 						    		echo "<input type='text' class='form-control' id='inputEmail3' placeholder='".$_SESSION["usuario"]."' readonly='true'>";
 						    	?>
 						    </div>
