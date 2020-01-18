@@ -20,9 +20,9 @@ if ($usuarioActivo->verificarRegistro()=="usuarioRepetido") {
 	header("Location:correoRepetido.php");
 } elseif ($usuarioActivo->verificarRegistro()=="correcto" && $clave==$claveRepeat) {
 	if ($codigo="2d7ba3fa7eb") {
-		header("Location:registroExitosoNormal.php");
+		header("Location:../php/registro/registroExitosoNormal.php");
 	} else {
-		header("Location:registroExitosoColaborador.php");
+		header("Location:../php/registro/registroExitosoColaborador.php");
 	}
 	
 } else {

@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<link rel="stylesheet" type="text/css" href="../styles.css">
-	<link rel="stylesheet" type="text/css" href="../bootstrap/css/bootstrap.min.css">
-	<script type="text/javascript" src="../bootstrap/js/jquery-3.4.1.min.js"></script>
-	<script type="text/javascript" src="../bootstrap/js/bootstrap.js"></script>
+	<link rel="stylesheet" type="text/css" href="../../styles.css">
+	<link rel="stylesheet" type="text/css" href="../../bootstrap/css/bootstrap.min.css">
+	<script type="text/javascript" src="../../bootstrap/js/jquery-3.4.1.min.js"></script>
+	<script type="text/javascript" src="../../bootstrap/js/bootstrap.js"></script>
 	<meta charset="utf-8">
 	<title>Gato Tareas</title>
 </head>
@@ -13,12 +13,12 @@
 <div class="general">
 	<div class="header">
 		<div class="titulo">
-			<img src="../img/gatoNegro.png" width="45px" class="float-left">
+			<img src="../../img/gatoNegro.png" width="45px" class="float-left">
 			<p class="h2 text-white float-left separadoIzquierda">GatoTareas</p>
 		</div>
 	</div>
 	<div class="imagen">
-		<img src="../img/gatoFeliz.jpg" class="img-fluid" width="100%">
+		<img src="../../img/gatoFeliz.jpg" class="img-fluid" width="100%">
 	</div>
 	
 	<div class="loginUsuario">
