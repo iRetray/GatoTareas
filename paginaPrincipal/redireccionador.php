@@ -29,4 +29,6 @@ if ($usuarioActivo->verificarRegistro()=="usuarioRepetido") {
 	header("Location:claveNoCoincide.php");
 }
 
+#hay que actualizar este redireccionador, este tiene que dirigir segun el tipo de usuario desde el login
+
 ?>

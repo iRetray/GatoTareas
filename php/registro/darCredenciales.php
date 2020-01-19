@@ -41,6 +41,11 @@ enviarCorreo($_SESSION['correo'], "Recuperación de Clave GatoTareas", "Sus cred
 						?>
 					</i></p></center>
 					<center>
+						<p class="lead">
+							Aun asi aqui quedan tus credenciales.
+						</p>
+					</center>
+					<center>
 						<form>
 						  <div class="form-group row">
 						    <label for="inputEmail3" class="col-sm-2 col-form-label">Usuario</label>
