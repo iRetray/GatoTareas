@@ -22,6 +22,13 @@ if ($usuarioActivo->verificarRegistro()=="usuarioRepetido") {
 	header("Location:../errores/correoRepetido.php");
 } elseif ($usuarioActivo->verificarRegistro()=="correcto" && $clave==$claveRepeat) {
 	if ($codigo=="2d7ba3fa7eb") {
+		#
+		$consulta = "INSERT INTO usuarios (usuario, nombre, clave, tipoUsuario, correo, telefono, nequi) VALUES ('$usuario','$nombre','$clave','colaborador','$correo','$whatsapp','$nequi')";
+		if (mysqli_query($conexion, $consulta)) {
+			echo "Consulta insertada correctamente";
+		} else {
+			echo "".mysqli_error($conexion);
+		}
 		header("Location:registroExitosoColaborador.php");
 	} else {
 		header("Location:registroExitosoNormal.php");
