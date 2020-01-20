@@ -3,7 +3,7 @@
 .general {
     display: grid;
     grid-template-rows: auto auto auto auto;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 4fr 1fr;
     grid-template-areas:
         "header header"
     	"imagen loginUsuario"
