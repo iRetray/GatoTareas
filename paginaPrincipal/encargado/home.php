@@ -51,6 +51,18 @@ $usuarioActivo = new usuario($_SESSION['usuario'], $_SESSION['clave']);
 	<div class="misPedidos">
 		
 	</div>
+
+	<div class="footer">
+		<div class="redes">
+		<img src="img/whatsapp.png" class="img-thumbnail float-left" width="140px">
+		<div class="float-left">
+			<div class="separadoIzquierda">
+			<h1 class="display-4 text-white">Contactanos</h1>
+			<p class="lead text-white">Comunícate directamente con GatoTareas<a href="https://api.whatsapp.com/send?phone=573507948999&text=Hola! Quiero recibir más información sobre GatoTareas :D" class="lead"><br>enviando un mensaje de Whatsapp.</a></p>
+			</div>
+			</div>
+		</div>
+	</div>
 	
 </div>
 
