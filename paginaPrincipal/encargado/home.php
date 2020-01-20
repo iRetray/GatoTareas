@@ -1,4 +1,7 @@
 <?php  
-#aqui va el home del cliente
-echo "Hola, estas en el home del cliente";
+session_start();
+if ($_SESSSION['usuario']=="") {
+	header("Location:../../php/errores/errorDeSeguridad.php");
+}
+
 ?>
