@@ -20,7 +20,7 @@ if ($usuarioActivo->verificarRegistroUsuario()=="usuarioRepetido") {
 	header("Location:../errores/usuarioRepetido.php");
 } elseif ($usuarioActivo->verificarRegistroCorreo()=="correoRepetido") {
 	header("Location:../errores/correoRepetido.php");
-} elseif ($usuarioActivo->verificarRegistroUsuario()=="correcto" && $clave==$claveRepeat) {
+} elseif ($usuarioActivo->verificarRegistroUsuario()=="correcto" && $usuarioActivo->verificarRegistroCorreo()=="correcto" && $clave==$claveRepeat) {
 	if ($codigo=="2d7ba3fa7eb") {
 		$consulta = "INSERT INTO usuarios (usuario, nombre, clave, tipoUsuario, correo, telefono, nequi) VALUES ('$usuario','$nombre','$clave','colaborador','$correo','$whatsapp','$nequi')";
 		if (mysqli_query($conexion, $consulta)) {

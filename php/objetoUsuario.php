@@ -55,6 +55,7 @@ class Usuario
 					return "usuarioRepetido";
 			}
 		return "correcto";
+		}
 	}
 
 	public function verificarRegistroCorreo(){
