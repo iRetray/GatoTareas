@@ -14,7 +14,9 @@ while ($columna = mysqli_fetch_array( $resultado ))
 		if ($columna['clave']==$clave) {
 			$credencialesCorrectas = true;
 			$usuarioActivo = new usuario($usuario, $clave);
-			$usuarioActivo->iniciarSesion();
+			session_start();
+			$_SESSION['usuario'] = $usuario;
+			$_SESSION['clave'] = $clave;
 			}
 		}
 }

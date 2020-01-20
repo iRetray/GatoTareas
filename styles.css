@@ -1,3 +1,5 @@
+/* Distribución del home inicial */
+
 .general {
     display: grid;
     grid-template-rows: auto auto auto auto;
@@ -6,7 +8,7 @@
         "header header"
     	"imagen loginUsuario"
     	"imagen loginUsuario"
-    	"redes loginUsuario";
+    	"footer footer";
 }
 .general .imagen {
     grid-area: imagen;
@@ -20,14 +22,45 @@
     grid-area: loginUsuario;
     padding: 10px;
 }
-.general .redes {
-    grid-area: redes;
+.redes {
     padding: 10px;
+    margin-bottom: 15px;
 }
 .general .header {
     grid-area: header;
-    background: #40698c;
-    
+    background: #40698c;  
+}
+.general .footer {
+    padding: 15px;
+    grid-area: footer;
+    background: #222222;  
+}
+
+/* Distribución del home colaborador */
+
+.generalC {
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+        "header header header"
+        "perfil pedido misPedidos";
+}
+.generalC .perfil {
+    grid-area: perfil;
+    padding: 15px;
+}
+.generalC .pedido {
+    grid-area: pedido;
+    padding: 15px;
+}
+.generalC .misPedidos {
+    grid-area: misPedidos;
+    padding: 15px;
+}
+.generalC .header {
+    grid-area: header;
+    background: #40698c; 
 }
 
 @import url('https://fonts.googleapis.com/css?family=Raleway:600&display=swap');
@@ -78,4 +111,10 @@
 .centrado {
     text-align: center;
     margin-bottom: 10px;  
+}
+
+.display-5 {
+  font-size: 2rem;
+  font-weight: 300;
+  line-height: 1.2;
 }
