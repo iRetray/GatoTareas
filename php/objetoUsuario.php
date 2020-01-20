@@ -45,7 +45,7 @@ class Usuario
 		}
 	}
 
-	public function verificarRegistro(){
+	public function verificarRegistroUsuario(){
 		include('../../conexion.php');
 		$consulta = "SELECT * FROM `usuarios` WHERE 1";
 		$resultado = mysqli_query($conexion, $consulta);
@@ -53,7 +53,16 @@ class Usuario
 			{
 				if ($columna['usuario']==$this->usuario) {
 					return "usuarioRepetido";
-				}
+			}
+		return "correcto";
+	}
+
+	public function verificarRegistroCorreo(){
+		include('../../conexion.php');
+		$consulta = "SELECT * FROM `usuarios` WHERE 1";
+		$resultado = mysqli_query($conexion, $consulta);
+		while ($columna = mysqli_fetch_array( $resultado ))
+			{
 				if ($columna['correo']==$this->correo) {
 					return "correoRepetido";
 				}
