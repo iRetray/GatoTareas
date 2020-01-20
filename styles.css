@@ -63,13 +63,11 @@
     grid-area: header;
     background: #40698c; 
 }
-.general .footer {
+.generalC .footer {
     padding: 15px;
     grid-area: footer;
     background: #222222;  
 }
-
-
 
 @import url('https://fonts.googleapis.com/css?family=Raleway:600&display=swap');
 

@@ -54,7 +54,7 @@ $usuarioActivo = new usuario($_SESSION['usuario'], $_SESSION['clave']);
 
 	<div class="footer">
 		<div class="redes">
-		<img src="img/whatsapp.png" class="img-thumbnail float-left" width="140px">
+		<img src="../../img/whatsapp.png" class="img-thumbnail float-left" width="140px">
 		<div class="float-left">
 			<div class="separadoIzquierda">
 			<h1 class="display-4 text-white">Contactanos</h1>
@@ -65,6 +65,8 @@ $usuarioActivo = new usuario($_SESSION['usuario'], $_SESSION['clave']);
 	</div>
 	
 </div>
+
+<p class="absolute">Hola absoluto</p>
 
 <!-------------------------- Modales ------------------------------------>
 
