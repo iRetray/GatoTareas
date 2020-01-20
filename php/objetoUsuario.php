@@ -12,7 +12,7 @@ class Usuario
 
 	public function __construct($usuario, $clave)
 	{
-		include('../../conexion.php');
+		include('conexion.php');
 		$this->usuario = $usuario;
 		$consulta = "SELECT * FROM `usuarios` WHERE 1";
 		$resultado = mysqli_query($conexion, $consulta);
