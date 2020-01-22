@@ -34,7 +34,7 @@ $usuarioActivo = new usuario($_SESSION['usuario'], $_SESSION['clave']);
 		</div>
 		<div class="loginModal">
 			<img src="../../img/userBlanco.png" width="45px">
-			<button type="button" class="btn btn btn-light" data-toggle="modal" data-target="#modalLogin">
+			<button type="button" onclick="location.href='../../php/logout.php'" class="btn btn btn-light">
 			 Cerrar Sesión
 			</button>
 		</div>
@@ -65,8 +65,6 @@ $usuarioActivo = new usuario($_SESSION['usuario'], $_SESSION['clave']);
 	</div>
 	
 </div>
-
-<p class="absolute">Hola absoluto</p>
 
 <!-------------------------- Modales ------------------------------------>
 
