@@ -25,7 +25,7 @@ if(!$credencialesCorrectas){
 	header("Location:../php/errores/errorDeCredenciales.php");
 }
 elseif($usuarioActivo->getTipoUsuario()=="cliente"){
-	header("Location:/cliente/home.php");
+	header("Location:cliente/home.php");
 }
 elseif ($usuarioActivo->getTipoUsuario()=="colaborador") {
 	header("Location:encargado/home.php");

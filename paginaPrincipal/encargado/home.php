@@ -60,11 +60,49 @@ $usuarioActivo = new usuario($_SESSION['usuario'], $_SESSION['clave']);
 	</div>
 
 	<div class="pedido">
-		
+		<center><p class="display-5">Pagina del Encargado</p></center>
+		<div class="cajaSombra">
+			<?php  
+				echo "Insertar pedidos desde la BD";
+			?>
+		</div>
 	</div>
 
 	<div class="misPedidos">
-		
+		<div class="cajaSombra">
+			<center><p class="display-5">Nuevo pedido</p></center>
+				<form id="nuevaTarea" action="verificarPedido.php" method="post">
+				  <div class="form-group">
+				    <label for="titulo">Titulo de la Tarea</label>
+				    <input type="text" class="form-control" id="titulo" aria-describedby="emailHelp" placeholder="Ensayo sobre movimiento cinetico" name="titulo">
+				  </div>
+				  <div class="form-group">
+				    <label for="tipoTrabajo">Tipo de Trabajo</label>
+				    <select class="form-control" id="tipoTrabajo">
+				      <option value="ensayo">Ensayo</option>
+				      <option value="examen">Examen</option>
+				      <option value="escrito">Trabajo escrito</option>
+				    </select>
+				    <small class="form-text text-muted">Elige la clasificación que mejor se ajuste a tu solicitud.</small>
+				  </div>
+				  <div class="form-group">
+				    <label for="fecha">Fecha de entrega</label>
+				    <input type="date" class="form-control" id="fecha" aria-describedby="emailHelp">
+				    <small class="form-text text-muted">Fecha en la que necesitas terminado tu trabajo.</small>
+				  </div>
+				  <div class="form-group">
+				    <label for="descripcion">Descripción del trabajo</label>
+				    <textarea name="descripcion" rows="5" cols="40" form="nuevaTarea"></textarea>
+				    <small class="form-text text-muted">Describe detalladamente todos los requerimientos que debe cumplir tu trabajo (extensión, normas APA/ICONTEC, estilo de las referencias).</small>
+				  </div>
+				  <div class="form-group">
+				    <label for="descripcion">Archivos base</label>
+				    <input type="file" name="archivo">
+				    <small class="form-text text-muted">Adjunta todos los archivos que se puedan necesitar en la realización del trabajo (comprímelos si son varios).</small>
+				  </div>
+				  <center><button type="submit" class="btn btn-primary">Enviar Solicitud</button></center>
+				</form>
+		</div>
 	</div>
 
 	<div class="footer">
