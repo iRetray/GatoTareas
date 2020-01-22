@@ -41,7 +41,14 @@ $usuarioActivo = new usuario($_SESSION['usuario'], $_SESSION['clave']);
 	</div>
 
 	<div class="perfil">
-		
+		<div class="cajaSombra">
+			<img src="../../img/perfi.jpg" class="perfilRedondo">
+			<center>
+				<p class="display-4">usuario</p>
+				<p class="display-5 text-muted">nombre <br> correo@gmail.com <br> icon numero<br> icon nequi</p>
+				<button class="btn btn-primary">Modificar Perfil</button>
+			</center>
+		</div>	
 	</div>
 
 	<div class="pedido">
