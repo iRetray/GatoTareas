@@ -74,12 +74,13 @@
     -webkit-box-shadow: 0px 0px 23px 10px rgba(0,0,0,0.25);
     -moz-box-shadow: 0px 0px 23px 10px rgba(0,0,0,0.25);
     box-shadow: 0px 0px 23px 10px rgba(0,0,0,0.25);
+    border-radius: 20px;
 }
 
 .perfilRedondo {
     width: 100%;
     border-radius: 50%;
-    
+    border:3px solid #222222;
 }
 
 @import url('https://fonts.googleapis.com/css?family=Raleway:600&display=swap');

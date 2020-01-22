@@ -44,9 +44,17 @@ $usuarioActivo = new usuario($_SESSION['usuario'], $_SESSION['clave']);
 		<div class="cajaSombra">
 			<img src="../../img/perfi.jpg" class="perfilRedondo">
 			<center>
-				<p class="display-4">usuario</p>
-				<p class="display-5 text-muted">nombre <br> correo@gmail.com <br> icon numero<br> icon nequi</p>
-				<button class="btn btn-primary">Modificar Perfil</button>
+				<p class="display-4">
+					<?php  
+						echo $usuarioActivo->getUsuario();
+					?>
+				</p>
+				<p class="display-5 text-muted">
+					<?php  
+						echo "".$usuarioActivo->getNombre()."<br><i>".$usuarioActivo->getCorreo()."</i><br><strong>".$usuarioActivo->getTelefono()."</strong><br>";
+					?>
+				</p>
+				<button class="btn btn-dark">Modificar Perfil</button>
 			</center>
 		</div>	
 	</div>
